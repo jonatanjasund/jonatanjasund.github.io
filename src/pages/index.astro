@@ -6,6 +6,7 @@ import StackCard from "@components/StackCard.astro"
 import { SITE, SOCIALS } from "@consts"
 import TwinklingStars from "@components/TwinklingStars.astro"
 import MeteorShower from "@components/MeteorShower.astro"
+import Container from "@components/Container.astro"
 
 const posts = (await getCollection("blog"))
   .filter(post => !post.data.draft)
@@ -41,7 +42,7 @@ const stack = [
 ]
 ---
 
-<PageLayout title="Jonatans Portefølje" description={SITE.DESCRIPTION}>
+<PageLayout title="Portefølje" description={SITE.DESCRIPTION}>
 
   <!-- Light Mode: Particles -->
   <div class='absolute inset-0 block dark:hidden'>
@@ -79,26 +80,38 @@ const stack = [
     <div class="animate absolute h-full w-full flex items-center justify-center">
       <div class='relative w-full h-full flex items-center justify-center'>
         <div class='p-5 text-center'>
-          <!-- <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
+          <!-- <p class='animate text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
             Hei, jeg er ...
           </p> -->
-          <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
+          <p class='animate text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
             Jonatan Jåsund
           </p>
-          <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
+          <p class='animate text-sm md:text-base lg:text-lg opacity-75'>
             Jeg er en <span class="font-bold">UX/UI Designer</span> med en lidenskap for å skape 
             <br>løsninger som føles både enkle og naturlige å bruke. 
           </p>
-          <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
+          <div id="ctaButtons" class='animate flex flex-wrap gap-4 justify-center mt-5'>
             <p id="projectsButton" class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 hover:cursor-pointer blend'>
               Se prosjektene mine
             </p>
-            <p id="contactButton" class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+            <p id="contactButton" class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 hover:cursor-pointer blend'>
               Ta kontakt
             </p>
           </div>
         </div>
       </div>
+    </div>
+    <div class="absolute bottom-16 inset-x-0 animate">
+      <Container size="md">
+        <div class="flex items-center justify-center">
+          <div id="scroll-indicator" class="animate-show delay-1000 group flex w-fit p-1.5 gap-1.5 text-sm items-center rounded hover:bg-black/5 hover:dark:bg-white/10 transition-colors duration-300 ease-in-out">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white -rotate-90">
+              <line x1="19" y1="12" x2="5" y2="12" class="scale-x-0 group-hover:scale-x-100 translate-x-3 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
+              <polyline points="12 19 5 12 12 5" class="translate-x-1 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
+            </svg>
+          </div>
+        </div>
+      </Container>
     </div>
   </section>
 
@@ -236,4 +249,18 @@ const stack = [
       target.scrollIntoView({ block: "center", behavior: "smooth" });
     })
   })
+
+
+  const timeWait = async () => {
+    await delay(5000);
+    console.log("Waited 5s");
+  };
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  window.addEventListener('load', function () {
+    sleep(5000).then(() => {document.querySelector('#scroll-indicator').classList.add('animate-pulse')});
+  });
 </script>

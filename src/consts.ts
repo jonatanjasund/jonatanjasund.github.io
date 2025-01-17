@@ -2,22 +2,22 @@ import type { Site, Page, Links, Socials } from "@types"
 
 // Global
 export const SITE: Site = {
-  TITLE: "Astro Sphere",
+  TITLE: "Jonatan Jåsund",
   DESCRIPTION: "Welcome to Astro Sphere, a portfolio and blog for designers and developers.",
-  AUTHOR: "Mark Horn",
+  AUTHOR: "Jonatan Jåsund",
 }
 
 // Work Page
-export const WORK: Page = {
-  TITLE: "Work",
-  DESCRIPTION: "Places I have worked.",
-}
+// export const WORK: Page = {
+//   TITLE: "Work",
+//   DESCRIPTION: "Places I have worked.",
+// }
 
 // Blog Page
-export const BLOG: Page = {
-  TITLE: "Blog",
-  DESCRIPTION: "Writing on topics I am passionate about.",
-}
+// export const BLOG: Page = {
+//   TITLE: "Blog",
+//   DESCRIPTION: "Writing on topics I am passionate about.",
+// }
 
 // Projects Page 
 export const PROJECTS: Page = {
@@ -34,19 +34,19 @@ export const SEARCH: Page = {
 // Links
 export const LINKS: Links = [
   { 
-    TEXT: "Home", 
+    TEXT: "Hjem", 
     HREF: "/", 
   },
+  // { 
+  //   TEXT: "Work", 
+  //   HREF: "/work", 
+  // },
+  // { 
+  //   TEXT: "Blog", 
+  //   HREF: "/blog", 
+  // },
   { 
-    TEXT: "Work", 
-    HREF: "/work", 
-  },
-  { 
-    TEXT: "Blog", 
-    HREF: "/blog", 
-  },
-  { 
-    TEXT: "Projects", 
+    TEXT: "Prosjekter", 
     HREF: "/projects", 
   },
 ]
