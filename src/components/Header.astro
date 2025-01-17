@@ -12,7 +12,7 @@ import Logo from "@components/Logo.astro"
     <div class="relative h-full w-full">
       <div class="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1 font-semibold">
         <a href="/" class="flex gap-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
-          <!-- <Logo /> -->
+          <Logo class="hidden" />
           <div>
             {SITE.TITLE}
           </div>
@@ -32,11 +32,11 @@ import Logo from "@components/Logo.astro"
     </div>
 
     <div class="buttons absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
-      <a href="/search" aria-label={`Search blog posts and projects on ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out", pathname === "/search" || "/" + subpath?.[0] === "/search" ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black" : "")}>
+      <!-- <a href="/search" aria-label={`Search blog posts and projects on ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out", pathname === "/search" || "/" + subpath?.[0] === "/search" ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black" : "")}>
         <svg class="size-full">
           <use href="/ui.svg#search"></use>
         </svg>
-      </a>
+      </a> -->
 
       <button id="header-theme-button" aria-label={`Toggle light and dark theme`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
         <svg class="size-full block dark:hidden">

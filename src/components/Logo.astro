@@ -1,3 +1,7 @@
-<svg class="size-6 fill-current">
+---
+const { class: className } = Astro.props
+---
+
+<svg class=`size-6 fill-current ${className}`>
   <use href="/brand.svg#brand"></use>
 </svg>
