@@ -1,4 +1,5 @@
 import defaultTheme from "tailwindcss/defaultTheme"
+import { transform } from "typescript"
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -25,6 +26,7 @@ export default {
       animation: {
         twinkle: "twinkle 2s ease-in-out forwards",
         meteor: "meteor 3s ease-in-out forwards",
+        fadeaway: "fadeaway 2s ease-in-out forwards",
       },
       keyframes: {
         twinkle: {
@@ -52,6 +54,32 @@ export default {
           "100%": { 
             opacity: 0, 
             transform: "translateY(0)" 
+          },
+        },
+        fadeaway: {
+          "0%": {
+            opacity: 1,
+            transform: "translateY(0) scale(1)",
+          },
+          "50%": {
+            opacity: 0.25
+          },
+          "100%": {
+            opacity: 0,
+            transform: "translateY(-100px) scale(0)",
+          },
+        },
+        fadein: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(100px) scale(0)",
+          },
+          "50%": {
+            opacity: 0.25
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0) scale(1)",
           },
         },
       },
