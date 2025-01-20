@@ -26,7 +26,6 @@ export default function ArrowCard({entry, pill, showDate}: Props) {
           }
         </div> }
 
-        {/* Title */}
         <div class={`font-semibold text-black dark:text-white ${(showDate || pill) && "mt-3"}`}>
           {entry.data.title}
         </div>
