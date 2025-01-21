@@ -32,9 +32,9 @@ const projects = defineCollection({
     demoUrl: z.string().optional(),
     repoUrl: z.string().optional(),
     meta: z.object({
-      gradient: z.coerce.string().optional(),
-      imgUrl: z.string().optional(),
-    }).optional(),
+      gradient: z.coerce.string(),
+      imgUrl: z.string(),
+    }),
   }),
 })
 
