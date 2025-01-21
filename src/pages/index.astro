@@ -7,6 +7,7 @@ import { SITE, SOCIALS } from "@consts"
 import TwinklingStars from "@components/TwinklingStars.astro"
 import MeteorShower from "@components/MeteorShower.astro"
 import Container from "@components/Container.astro"
+import ProjectCard from "@components/ProjectCard.astro"
 
 const posts = (await getCollection("blog"))
   .filter(post => !post.data.draft)
@@ -116,7 +117,7 @@ const stack = [
   </section>
 
   <div class="relative bg-white dark:bg-black">
-    <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
+    <div class="mx-auto max-w-screen-md p-5 space-y-24 pb-16">
 
       <!-- About Section -->
       <section class="animate">
@@ -135,7 +136,7 @@ const stack = [
         </article> -->
       </section>
 
-      <!-- Project Preview Section -->
+      <!-- Project Section -->
       <section id="projects" class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
@@ -148,13 +149,14 @@ const stack = [
               </span>
             </a>
           </div>
-          <ul class="space-y-4">
+          <div class="grid grid-cols-2 gap-8">
             {projects.map((project) => (
-              <li>
-                <ArrowCard entry={project} />
-              </li>
+              <div>
+                {/* <ArrowCard entry={project} /> */}
+                <ProjectCard class={project.data.meta?.gradient} entry={project} img={project.data.meta?.imgUrl} />
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
