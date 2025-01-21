@@ -10,7 +10,7 @@ demoUrl: https://astro-sphere-demo.vercel.app
 repoUrl: https://github.com/markhorn-dev/astro-sphere
 meta: {
   gradient: "bg-gradient-to-br from-red-600 to-red-950",
-  imgUrl: public/img/MoveitMockup.png,
+  imgUrl: img/MoveitMockup.png,
 } 
 ---
 

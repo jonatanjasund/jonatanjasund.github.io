@@ -10,7 +10,7 @@ demoUrl: https://astro-sphere-demo.vercel.app
 repoUrl: https://github.com/markhorn-dev/astro-sphere
 meta: {
   gradient: "bg-gradient-to-tl from-blue-700 to-indigo-900",
-  imgUrl: /public/img/Mikon Mockup.png,
+  imgUrl: img/Mikon Mockup.png,
 } 
 ---
 
