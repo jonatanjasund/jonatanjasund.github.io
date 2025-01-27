@@ -7,10 +7,10 @@ tags:
 - Wireframing
 - Prototyping
 demoUrl: https://astro-sphere-demo.vercel.app
-repoUrl: https://github.com/markhorn-dev/astro-sphere
+repoUrl: cases/moveit/MoveIt.pdf
 meta: {
   gradient: "bg-gradient-to-br from-red-600 to-red-950",
-  imgUrl: img/MoveitMockup.png,
+  imgUrl: cases/moveit/MoveitMockup.png,
 } 
 ---
 

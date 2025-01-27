@@ -7,7 +7,7 @@ tags:
 - Responsive Web
 - Wix
 demoUrl: https://astro-sphere-demo.vercel.app
-repoUrl: https://github.com/markhorn-dev/astro-sphere
+repoUrl: https://www.mikon.no
 meta: {
   gradient: "bg-gradient-to-tl from-blue-700 to-indigo-900",
   imgUrl: img/Mikon Mockup.png,
