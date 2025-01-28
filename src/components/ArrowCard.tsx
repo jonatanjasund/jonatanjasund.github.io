@@ -18,12 +18,6 @@ export default function ArrowCard({entry, pill, showDate}: Props) {
               {entry.collection === "blog" ? "post" : "project"}
             </div>
           }
-          
-          {showDate &&
-            <div class="text-sm uppercase">
-              {formatDate(entry.data.date)}
-            </div>
-          }
         </div> }
 
         <div class={`font-semibold text-black dark:text-white ${(showDate || pill) && "mt-3"}`}>
