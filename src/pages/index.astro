@@ -9,15 +9,14 @@ import MeteorShower from "@components/MeteorShower.astro"
 import Container from "@components/Container.astro"
 import ProjectCard from "@components/ProjectCard.astro"
 
-const posts = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+// const posts = (await getCollection("blog"))
+//   .filter(post => !post.data.draft)
+//   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+//   .slice(0,3)
 
 const projects = (await getCollection("projects"))
   .filter(project => !project.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+  .sort((a, b) => a.data.index - b.data.index)
 
 const stack = [
   { 
@@ -153,7 +152,7 @@ const stack = [
             {projects.map((project) => (
               <div>
                 {/* <ArrowCard entry={project} /> */}
-                <ProjectCard class={project.data.meta?.gradient} entry={project} img={project.data.meta?.imgUrl} />
+                <ProjectCard class={project.data.gradient} entry={project} />
               </div>
             ))}
           </div>
@@ -161,7 +160,7 @@ const stack = [
       </section>
 
       <!-- Blog Preview Section -->
-      <section class="animate hidden">
+      <!-- <section class="animate hidden">
         <div class="space-y-4">
           <div class="flex justify-between">
             <p class="font-semibold text-black dark:text-white">
@@ -181,7 +180,7 @@ const stack = [
             ))}
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- Tech Stack Section -->
       <section class="animate">
