@@ -59,12 +59,12 @@ export const SOCIALS: Socials = [
     TEXT: "jonatan.jasund@gmail.com",
     HREF: "mailto:jonatan.jasund@gmail.com",
   },
-  { 
+/*   { 
     NAME: "Github",
     ICON: "github",
     TEXT: "jonatanjasund",
     HREF: "https://github.com/jonatanjasund/"
-  },
+  }, */
   { 
     NAME: "LinkedIn",
     ICON: "linkedin",

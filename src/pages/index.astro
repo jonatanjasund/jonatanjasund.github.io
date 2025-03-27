@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content"
 import PageLayout from "@layouts/PageLayout.astro"
-import ArrowCard from "@components/ArrowCard"
 import StackCard from "@components/StackCard.astro"
 import { SITE, SOCIALS } from "@consts"
 import TwinklingStars from "@components/TwinklingStars.astro"
@@ -119,20 +118,16 @@ const stack = [
     <div class="mx-auto max-w-screen-md p-5 space-y-24 pb-16">
 
       <!-- About Section -->
-      <section class="animate">
+      <section class="animate flex flex-col items-center">
+        <div class="size-24 sm:size-32 rounded-full overflow-clip pt-px relative">
+          <div class="size-24 sm:size-32 rounded-full absolute top-0 bg-gradient-to-r from-gray-200/80 via-slate-400 to-gray-200/80 blur-xs"></div>
+          <img class="rounded-full absolute" src="/img/IMG_4463.jpeg" alt="Portrettbilde av Jonatan">
+        </div>
         <article>
           <p>Jeg er en <b>UX/UI-designer</b> med en lidenskap for å skape løsninger som føles både enkle og naturlige å bruke. Helt siden barndommen har jeg vært fascinert av hvordan ting ser ut og fungerer – alt fra apper til dingser vi bruker i hverdagen. Der de fleste kanskje ble frustreres av dårlig design, elsker jeg å gruble på hva som er galt og hvordan det kan gjøres bedre.</p>
 
           <p>Jeg mener teknologi bør være en hjelp, ikke en hindring. Verktøyene vi bruker i hverdagen skal være intuitive og en glede å navigere, uten behov for kompliserte bruksanvisninger. Målet mitt er å designe produkter som fjerner frustrasjon og gjør opplevelsen sømløs og tilfredsstillende.</p>
         </article>
-        <!-- <article>
-          <p>I am a <b><i>software engineer</i></b>, <b><i>ui/ux designer</i></b>, <b><i>product planner</i></b>, <b><i>mentor</i></b>, <b><i>student</i></b>, <b><i>minimalist</i></b>, <b><i>eternal optimist</i></b>, <b><i>crypto enthusiast</i></b> and <b><i>sarcasm connoisseur</i></b>.</p>
-          <p>I love to both build and break things. I am motivated by challenging projects with self-guided research and dynamic problem solving. My true passion is crafting creative front end designs with unique takes on color, typography and motion.</p>
-          <p>During my career</p>
-          <p>I have built products ranging from marketing and ecommerce websites to complex enterprise apps with focus on delivering fast, elegant code along with delightful user interfaces.</p>
-          <p>Now</p>
-          <p>I currently work as a software engineer at StreamlineFS, where I do product planning, design and development.</p>
-        </article> -->
       </section>
 
       <!-- Project Section -->
@@ -151,36 +146,12 @@ const stack = [
           <div class="grid grid-cols-2 gap-8">
             {projects.map((project) => (
               <div>
-                {/* <ArrowCard entry={project} /> */}
                 <ProjectCard class={project.data.gradient} entry={project} />
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      <!-- Blog Preview Section -->
-      <!-- <section class="animate hidden">
-        <div class="space-y-4">
-          <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">
-              Nylige artikler
-            </p>
-            <a href="/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-              <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                Alle artikler
-              </span>
-            </a>
-          </div>
-          <ul class="space-y-4">
-            {posts.map((post) => (
-              <li>
-                <ArrowCard entry={post} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section> -->
 
       <!-- Tech Stack Section -->
       <section class="animate">
